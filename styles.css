@@ -1,0 +1,527 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2d5016 0%, #4a7c29 50%, #6ba644 100%);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.parks-canada-logo, .richmond-logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #b8e6b8;
+}
+
+.date {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffeb3b;
+    margin-bottom: 0.25rem;
+}
+
+.address {
+    font-size: 1.1rem;
+    color: #e8f5e8;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background: #1a3d0a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: block;
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    background: #4a7c29;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.content-section {
+    margin-bottom: 3rem;
+    scroll-margin-top: 80px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: #2d5016;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #6ba644;
+    padding-bottom: 0.5rem;
+}
+
+/* Info Cards */
+.info-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #6ba644;
+}
+
+.info-card h3 {
+    color: #2d5016;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.info-card h4 {
+    color: #4a7c29;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.info-card ul, .info-card ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* Highlight and Warning Boxes */
+.highlight {
+    background: #e8f5e8;
+    border: 1px solid #6ba644;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-weight: 500;
+}
+
+.warning {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #856404;
+    font-weight: 500;
+}
+
+/* Schedule Grid */
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.schedule-day {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid #6ba644;
+}
+
+.schedule-day h3 {
+    color: #2d5016;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.schedule-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.schedule-item .time {
+    font-weight: bold;
+    color: #2d5016;
+    min-width: 120px;
+    font-size: 0.9rem;
+}
+
+.schedule-item .activity {
+    color: #555;
+    flex: 1;
+    margin-left: 1rem;
+}
+
+/* Provided Items Grid */
+.provided-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.provided-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 2px solid #e8f5e8;
+    transition: transform 0.3s ease;
+}
+
+.provided-item:hover {
+    transform: translateY(-2px);
+    border-color: #6ba644;
+}
+
+.provided-item h4 {
+    color: #2d5016;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.provided-item small {
+    color: #666;
+    font-style: italic;
+}
+
+/* Checklist Styles */
+.checklist-container {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.checklist-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.checklist-controls button {
+    background: #6ba644;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    min-width: 140px;
+}
+
+.checklist-controls button:hover {
+    background: #4a7c29;
+    transform: translateY(-2px);
+}
+
+.checklist-category {
+    margin-bottom: 2rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.checklist-category h3 {
+    background: #2d5016;
+    color: white;
+    padding: 1rem 1.5rem;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.checklist-items {
+    padding: 1rem 1.5rem;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.checklist-item:hover {
+    background-color: #f8f9fa;
+}
+
+.checklist-item.completed {
+    background-color: #e8f5e8;
+    text-decoration: line-through;
+    color: #666;
+}
+
+.item-checkbox {
+    margin-right: 1rem;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.checklist-item span {
+    flex: 1;
+    line-height: 1.5;
+}
+
+.packing-tip {
+    background: #e3f2fd;
+    border: 1px solid #2196f3;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.packing-tip h4 {
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+}
+
+/* Prohibited Items */
+.prohibited-items {
+    background: #ffebee;
+    border: 1px solid #f44336;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.prohibited-items li {
+    color: #c62828;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+/* Cooking Info */
+.cooking-info {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.external-links a {
+    color: #2d5016;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.external-links a:hover {
+    color: #6ba644;
+    text-decoration: underline;
+}
+
+/* Contact Info */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.contact-info a {
+    color: #2d5016;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: #6ba644;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #2d5016;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .logos {
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .main-nav ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .main-nav a {
+        white-space: nowrap;
+        min-width: max-content;
+    }
+    
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .schedule-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .schedule-item .time {
+        min-width: auto;
+        margin-bottom: 0.3rem;
+    }
+    
+    .schedule-item .activity {
+        margin-left: 0;
+    }
+    
+    .provided-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .checklist-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .checklist-controls button {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .logos {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+    header, .main-nav, footer {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .main-nav {
+        display: none;
+    }
+    
+    .content-section {
+        page-break-inside: avoid;
+        margin-bottom: 2rem;
+    }
+    
+    .checklist-controls {
+        display: none;
+    }
+    
+    .info-card, .checklist-category {
+        break-inside: avoid;
+    }
+}
